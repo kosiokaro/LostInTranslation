@@ -78,6 +78,20 @@ public class JSONTranslator implements Translator {
         }
     }
 
+//    public List<String> getLanguageCodes(String countryCode) {
+//        List<String> translan = new ArrayList<>();
+//        //System.out.println("Looking for languages for country: " + countryCode);
+//
+//        for (String language : this.languageCodes) {
+//            if (translations.containsKey(countryCode + "-" + language)) {
+//                translan.add(language);
+//                //System.out.println("Found language: " + language + " for key: " + countryCode + "-" + language);
+//            }
+//        }
+//        //System.out.println("Total languages found: " + translan.size());
+//        return translan;
+//    }
+
     @Override
     public List<String> getLanguageCodes() {
         return new ArrayList<>(languageCodes);
@@ -85,7 +99,7 @@ public class JSONTranslator implements Translator {
 
     @Override
     public List<String> getCountryCodes() {
-        return new ArrayList<>(countryCodes);
+        return countryCodes;
     }
 
     @Override
